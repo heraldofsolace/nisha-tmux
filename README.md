@@ -33,7 +33,7 @@ You can install this plugin with [TPM](https://github.com/tmux-plugins/tpm)
 
 #### Left status bar (prefix pressed)
 
-[prefix](screenshots/status-prefix.png)
+![prefix](screenshots/status-prefix.png)
 
 ### Configuration
 
