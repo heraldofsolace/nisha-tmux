@@ -52,11 +52,11 @@ main() {
     tmux set-window-option -g window-status-format "#[fg=${background},bg=${selection},nobold,noitalics,nounderscore]${left_sep} #[bg=${selection},fg=${foreground}] #I ${left_sep2} #W #[fg=${selection},bg=${background},nobold,noitalics,nounderscore]${left_sep}"
     tmux set-window-option -g window-status-separator ""
 
-    tmux set-window-option -g window-status-bell-style "#[fg=${background},bg=${selection},nobold,noitalics,nounderscore]${left_sep} #[bg=${selection},fg=${yellow}] #I ${left_sep2} #W #[fg=${yellow},bg=${background},nobold,noitalics,nounderscore]${left_sep}"
+    tmux set-window-option -g window-status-bell-style "fg=${background},bg=${yellow},blink,bold"
 
-    tmux set-window-option -g window-status-activity-style "#[fg=${background},bg=${selection},nobold,noitalics,nounderscore]${left_sep} #[bg=${selection},fg=${foreground}, blink] #I ${left_sep2} #W #[fg=${selection},bg=${background},nobold,noitalics,nounderscore]${left_sep}"
+    tmux set-window-option -g window-status-activity-style "bg=${green},fg=${background},bold"
 
-    tmux set-window-option -g window-status-last-style "#[fg=${background},bg=${selection},nobold,noitalics,nounderscore]${left_sep} #[bg=${selection},fg=${green}] #I ${left_sep2} #W #[fg=${selection},bg=${background},nobold,noitalics,nounderscore]${left_sep}"
+    tmux set-window-option -g window-status-last-style "fg=${blue}"
 }
 
 main
