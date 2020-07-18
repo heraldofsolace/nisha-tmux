@@ -19,6 +19,24 @@ You can install this plugin with [TPM](https://github.com/tmux-plugins/tpm)
 
 ### Screenshots
 
+#### Full Screen
+
+![full](screenshots/full.png)
+
+#### Status Bar
+
+![status](screenshots/status.png)
+
+#### Left status bar (normal)
+
+![normal status](screenshots/status-normal.png)
+
+#### Left status bar (prefix pressed)
+
+[prefix](screenshots/status-prefix.png)
+
+### Configuration
+
 Coming soon!
 
 ### Light Variant
