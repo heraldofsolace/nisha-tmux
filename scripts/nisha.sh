@@ -1,3 +1,33 @@
+#!/usr/bin/env bash
+
+# Nisha: Dark colorscheme for Tmux
+# Copyright (C) 2020  Aniket Bhattacharyea
+
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+
+get_tmux_option() {
+  local option=$1
+  local default_value=$2
+  local option_value=$(tmux show-option -gqv "$option")
+  if [ -z $option_value ]; then
+    echo $default_value
+  else
+    echo $option_value
+  fi
+}
+
 main() {
     backgrounddark='#262626'
     background='#191a21'
@@ -20,12 +50,12 @@ main() {
     selection='#373a42'
 
     current_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-    left_icon='😎 '
-    left_icon_prefix='🥺 '
-    left_sep=''
-    left_sep2=''
-    right_sep=''
-    right_sep2=''
+    left_icon=$(get_tmux_option "@nisha-left-icon" '😎 ')
+    left_icon_prefix=$(get_tmux_option "@nisha-left-icon-prefix" '🥺 ')
+    left_sep=$(get_tmux_option "@nisha-left-sep" '')
+    left_sep2=$(get_tmux_option "@nisha-left-sep2" '')
+    right_sep=$(get_tmux_option "@nisha-right-sep" '')
+
     tmux set-option -g status-interval 60
     tmux set-option -g clock-mode-style 24
 
